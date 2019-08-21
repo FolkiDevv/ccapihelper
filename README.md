@@ -160,4 +160,4 @@ if($result === false) {
   }
 }
 ```
-**Вся помощь в ** [беседе Vk](https://vk.me/join/AJQ1dzYf1BBBwChl3mcP8kvz)
+**Вся помощь в** [беседе Vk](https://vk.me/join/AJQ1dzYf1BBBwChl3mcP8kvz)
