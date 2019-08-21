@@ -1,5 +1,10 @@
 <?php
 
+/*
+CCApiHelper
+Библиотека для работы с CatCoin API
+https://github.com/Floory/ccapihelper
+*/
 class CCApiHelper {
 
 	protected const API_HREF = 'https://catcoin.ru/api/';
