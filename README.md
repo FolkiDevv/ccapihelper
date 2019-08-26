@@ -167,6 +167,3 @@ if($result === false) {
   }
 }
 ```
-
-**Вся помощь в** [беседе Vk](https://vk.me/join/AJQ1dzYf1BBBwChl3mcP8kvz)
->>>>>>> 97da6c6d299cb78469932df842371deaa7871380

@@ -2,9 +2,8 @@
 
 /*
 CCApiHelper
-<<<<<<< HEAD
-<<<<<<< HEAD
 Developed by Floory
+Библиотека для работы с CatCoin API
 https://github.com/Floory/ccapihelper
 */
 class CCApiHelper {
