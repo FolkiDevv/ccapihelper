@@ -1,5 +1,12 @@
 <?php
 
+/*
+CCApiHelper
+<<<<<<< HEAD
+<<<<<<< HEAD
+Developed by Floory
+https://github.com/Floory/ccapihelper
+*/
 class CCApiHelper {
 
 	protected const API_HREF = 'https://catcoin.ru/api/';
@@ -13,25 +20,14 @@ class CCApiHelper {
 
 		$this->merchantid = $merchantid;
 		$this->apikey = $apikey;
+		print("YES");
 	}
 
-	public function isValidHook($prms) {
-		if(is_array($prms) || is_object($prms)) {
-			$p = [];
-			if(is_object($prms)) {
-				foreach($prms as $key => $value) {
-					$p[$key] = $value;
-				}
-			} else {
-				$p = $prms;
-			}
-
-			if(isset($p['id'], $p['from_id'], $p['amount'], $p['payload'], $p['key'])) {
-				$key = md5(implode(';', [$p['id'], $p['from_id'], $p['amount'], $p['payload'], $this->apikey]));
-				return $key === $p['key'];
-			}
+	public function isValidHook($p) {
+		if(isset($p['id'], $p['amount'], $p['payload'], $p['created_at'], $p['from_id'], $p['to_id'], $p['key'])) {
+			$key = md5($p['id'].$p['from_id'].$p['amount'].$p['payload'].$this->apikey);
+			return $key === $p['key'];
 		}
-
 		return false;
 	}
 
@@ -67,7 +63,7 @@ class CCApiHelper {
 	public function genPayLink($sum, $fixed = true) {
 		$payload = rand(0, 999999999999999);
 		$merchantid = $this->merchantid;
-		$href = "vk.com/app6961307#x{$merchantid}_{$sum}_{$payload}".($fixed ? "" : "_1");
+		$href = "vk.com/app7044895#x{$merchantid}_{$sum}_{$payload}".($fixed ? "" : "_1");
 
 		return $href;
 	}
