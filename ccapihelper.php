@@ -19,12 +19,12 @@ class CCApiHelper {
 
 		$this->merchantid = $merchantid;
 		$this->apikey = $apikey;
-		print("YES");
 	}
 
 	public function isValidHook($p) {
 		if(isset($p['id'], $p['amount'], $p['payload'], $p['created_at'], $p['from_id'], $p['to_id'], $p['key'])) {
 			$key = md5($p['id'].$p['from_id'].$p['amount'].$p['payload'].$this->apikey);
+			print("YES");
 			return $key === $p['key'];
 		}
 		return false;

@@ -1,7 +1,7 @@
 # CCApiHelper
 Библиотека для удобной работы с CatCoin API на PHP.
 
-[![CCApiHelper](https://img.shields.io/badge/CCApiHelper-1.0-brightgreen)](https://github.com/Floory/ccapihelper)
+[![CCApiHelper](https://img.shields.io/badge/CCApiHelper-1.1-brightgreen)](https://github.com/Floory/ccapihelper)
 [![PHP](https://img.shields.io/badge/PHP-%3E%3D7.0-blue)](https://php.net/)
 [![Беседа в Vk](https://img.shields.io/badge/%D0%91%D0%B5%D1%81%D0%B5%D0%B4%D0%B0%20%D0%B2-Vk-orange)](https://vk.me/join/AJQ1dzYf1BBBwChl3mcP8kvz)
 
@@ -31,8 +31,8 @@ $cc = new CCApiHelper(523325665, 'b84619xnb70919303e1bc');
 | apikey       | string | **yes**           | Платёжный ключ                                       |
 
 ## ВНИМАНИЕ!!
-**YES**, возвращается АВТОМАТИЧЕСКИ после инициализации класса библиотеки (`$cc = new CCApiHelper(523325669, 'b84619xnb70919303e1bc');`)
-**ВАМ ВОЗВРАЩАТЬ В РУЧНУЮ ЕГО НЕ НУЖНО!!!**
+**YES**, возвращается АВТОМАТИЧЕСКИ после вызова функции библиотеки (`$cc->isValidHook($_POST)`)
+**ВАМ ВОЗВРАЩАТЬ В РУЧНУЮ ЕГО НЕ НУЖНО!!!** (так как это требуется только при запросе от сервера Cat Coin`а)
 
 ## Получение списка транзакций
 Пример:
